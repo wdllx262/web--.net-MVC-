@@ -1,0 +1,15 @@
+D:\15211160209\Book\Book.Model\bin\测试环境\Book.Model.dll
+D:\15211160209\Book\Book.Model\bin\测试环境\Book.Model.pdb
+D:\15211160209\Book\Book.Model\obj\测试环境\Book.Model.csprojResolveAssemblyReference.cache
+D:\15211160209\Book\Book.Model\obj\测试环境\Book.Model.dll
+D:\15211160209\Book\Book.Model\obj\测试环境\Book.Model.pdb
+C:\Users\Administrator\Desktop\15211160209\15211160209\Book\Book.Model\bin\测试环境\Book.Model.dll
+C:\Users\Administrator\Desktop\15211160209\15211160209\Book\Book.Model\bin\测试环境\Book.Model.pdb
+C:\Users\Administrator\Desktop\15211160209\15211160209\Book\Book.Model\obj\测试环境\Book.Model.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\15211160209\15211160209\Book\Book.Model\obj\测试环境\Book.Model.dll
+C:\Users\Administrator\Desktop\15211160209\15211160209\Book\Book.Model\obj\测试环境\Book.Model.pdb
+C:\Users\Administrator\Desktop\15211160209\15211160209\15211160209\Book\Book.Model\bin\测试环境\Book.Model.dll
+C:\Users\Administrator\Desktop\15211160209\15211160209\15211160209\Book\Book.Model\bin\测试环境\Book.Model.pdb
+C:\Users\Administrator\Desktop\15211160209\15211160209\15211160209\Book\Book.Model\obj\测试环境\Book.Model.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\15211160209\15211160209\15211160209\Book\Book.Model\obj\测试环境\Book.Model.dll
+C:\Users\Administrator\Desktop\15211160209\15211160209\15211160209\Book\Book.Model\obj\测试环境\Book.Model.pdb

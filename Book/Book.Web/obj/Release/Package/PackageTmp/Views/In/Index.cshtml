@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "/Share/_Layout1.cshtml";
+}
+@section css{
+}
+
+<section id="main-content">
+    <section class="wrapper">
+        <h3><i class="fa fa-angle-right"></i> 入库单列表</h3>
+        <div class="row mt">
+            <div class="col-lg-12">
+                <div class="content-panel">
+                    <h4><i class="fa fa-angle-right"></i> Responsive Table</h4>
+                    <section id="unseen">
+                        <table id="InList"></table>
+                        @*<table data-toggle="table" data-url="/in.json">
+                            <thead>
+                            <tr>
+                            <th data-field="Id">单据号</th>
+                            <th data-field="UserName">经手人</th>
+                            <th data-field="CreateTime">时间</th>
+                            <th data-field="TotalMoney">金额</th>
+                            <th data-field="ProviderName">供应商</th>
+                                                      </tr>
+                                                  </thead>
+                                              </table>*@
+                    </section>
+                </div><!-- /content-panel -->
+            </div><!-- /col-lg-4 -->
+        </div><!-- /row -->
+    </section>
+
+</section>
+@section js{
+    <script>
+
+            $('#InList').bootstrapTable({
+                url: '/in/GetList',
+                method: 'post',
+                dataType: "json",
+                dataField: "data",
+                classes: 'table',//边框
+                undefinedText: '',//当数据为 undefined 时显示的字符
+                pagination: true,//启动分页
+                paginationLoop: true,
+                pageNumber: 1,
+                pageSize: 5,
+                pageList: [1, 5, 10, 20],
+                striped: true,
+                showColumns: true,  //显示下拉框勾选要显示的列
+                showRefresh: true,  //显示刷新按钮
+                showToggle: true,//显示一行是否改成竖着
+                showPaginationSwitch: true,//是否显示 下面的分页框
+                search: true, //显示搜索框
+                detailView: true,
+                toolbal: '#toolbar',
+                detailFormatter: function (index, row) {
+                    return JSON.stringify(row);
+                },
+                columns: [{
+                    field: 'checkbox',
+                    title: 'checkbox',
+                    checkbox: true
+                }, {
+                    field: 'Head.Id',
+                    title: '序号'
+                }, {
+                    field: 'Head.UserName',
+                    title: '名称',
+                    align: 'center',
+                    sortable: true
+                }, {
+                    field: 'Head.CreateTime',
+                    title: '创立时间',
+                    align: 'center'
+                },
+                {
+                    field: 'Head.TotalMoney',
+                    title: '总金额',
+                    align: 'center'
+                },
+                {
+                    field: 'Head.Provider.Name',
+                    title: '供应商',
+                    align: 'center'
+                }
+                //, {
+                //    title: '操作',
+                //    field: 'caozuo',
+                //    align: 'center',
+                //    formatter: function (value, row, index) {
+                //        var e = '<a  style="display: block;" class="btn btn-warning btn-xs" onclick="edit(\'' + index + '\')">' +
+                //         '<i class="glyphicon glyphicon-pencil"></i>编辑</a>';
+                //        var d = '<a  style="display: block;margin-top:5px;" class="btn btn-info btn-xs" onclick="view(\'' + index + '\')">' +
+                //         '<i class="glyphicon glyphicon-list-alt"></i>查看</a>';
+                //        return e + d;
+                //    }
+                //}
+            ]
+            });
+
+    </script>
+}
+
+
+
+
+

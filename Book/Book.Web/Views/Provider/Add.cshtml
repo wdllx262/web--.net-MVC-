@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "/Share/_Layout1.cshtml";
+}
+<section id="main-content">
+    <section class="wrapper">
+        <h3><i class="fa fa-angle-right"></i> 供应商增加</h3>
+        <form action="/Provider/AddSave" method="post">
+            供应商名称 <input type="text" id="Name" name="Name" /> <br />
+            供应商电话<input type="text" id="Tel" name="Tel" /> <br />
+            供应商传真<input type="text" id="Fax" name="Fax" /><br />
+            备注<input type="text" id="Memo" name="Memo" /><br />
+
+            <input type="submit" name="Save" value="提交 " />
+        </form>
+    </section>
+</section>
+

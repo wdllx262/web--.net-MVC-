@@ -1,0 +1,9 @@
+C:\Users\Administrator\Desktop\15211160209\Book\Book.BLL\bin\Release\Book.BLL.dll
+C:\Users\Administrator\Desktop\15211160209\Book\Book.BLL\bin\Release\Book.BLL.pdb
+C:\Users\Administrator\Desktop\15211160209\Book\Book.BLL\bin\Release\Book.DAL.dll
+C:\Users\Administrator\Desktop\15211160209\Book\Book.BLL\bin\Release\Book.Model.dll
+C:\Users\Administrator\Desktop\15211160209\Book\Book.BLL\bin\Release\Book.DAL.pdb
+C:\Users\Administrator\Desktop\15211160209\Book\Book.BLL\bin\Release\Book.Model.pdb
+C:\Users\Administrator\Desktop\15211160209\Book\Book.BLL\obj\Release\Book.BLL.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\15211160209\Book\Book.BLL\obj\Release\Book.BLL.dll
+C:\Users\Administrator\Desktop\15211160209\Book\Book.BLL\obj\Release\Book.BLL.pdb

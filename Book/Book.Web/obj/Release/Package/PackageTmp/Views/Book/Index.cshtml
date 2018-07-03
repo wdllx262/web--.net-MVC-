@@ -1,0 +1,199 @@
+﻿@{
+    Layout = "/Share/_Layout1.cshtml";
+    List<Book.Model.T_Base_Book> lst = ViewBag.lst;
+    int count = ViewBag.count;
+    int pageSize = ViewBag.PageSize;
+    int MaxPageIndex = ViewBag.MaxPageIndex;
+    int num = count;
+
+}
+@section css{
+
+}
+<section id="main-content">
+    <section class="wrapper">
+        <h3><i class="fa fa-angle-right"></i> 书籍列表</h3>
+        <div class="row mt">
+            <div class="col-lg-12">
+                <div class="content-panel">
+                    <h4><i class="fa fa-angle-right"></i> 书籍列表</h4>
+                    <section id="unseen">
+                        <table class="table table-bordered table-striped table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>书名</th>
+                                    <th>出版社</th>
+                                    <th>作者</th>
+                                    <th>版本</th>
+                                    <th>编码</th>
+                                    <th>价格</th>
+                                    <th>操作1</th>
+                                    <th>操作2</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bodyContent">
+                                @foreach (var item in lst)
+            {
+                                    <tr id="tr_@item.Id">
+                                        <td>@item.Id</td>
+                                        <td>@item.BookName</td>
+                                        <td>@item.PressName</td>
+                                        <td>@item.Author</td>
+                                        <td>@item.SN</td>
+                                        <td>@item.Version</td>
+                                        <td>@item.Price</td>
+                                        <td><a href="javascript:deleteModal(@item.Id)">删除</a></td>
+                                        <td><a href="/book/update?Id=@item.Id">编辑</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <div class="btn-group"  id="pageBtnGroup">
+                            @{
+                                for (int i = 1; i <= Math.Ceiling(count * 1.0 / pageSize); i++)
+                                {
+                                    if (i == 1)
+                                    {
+                                        <button type="button" class="btn btn-default active" onclick="getList(@i)">@i</button>
+                                    }
+                                    else
+                                    {  <button type="button" class="btn btn-default" onclick="getList(@i)">@i</button>
+                                    }
+                                    if (i >= MaxPageIndex)
+                                    {
+                                        break;
+                                    }
+                                }
+                            }
+
+
+
+
+                        </div>
+                    </section>
+                </div><!-- /content-panel -->
+            </div><!-- /col-lg-4 -->
+        </div><!-- /row -->
+
+    </section>
+
+</section>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                是否要确定删除?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" onclick="bookDelete()">确定</button>
+            </div>
+        </div>
+    </div>
+</div>   
+
+@section js{
+<script type="text/javascript">
+    currentId = 0;
+    function deleteModal(Id)
+    {
+        currentId = Id;
+        $("#myModal").modal("show");
+    }
+    function update(Id) {
+        location.href = "/book/update?Id=" + Id;
+    }
+    function getList(CurrentPage)
+    {
+        $.ajax({
+            url: "/book/GetList",
+            data: "CurrentPage=" + CurrentPage,
+            type: "post",
+            dataType: "json",
+            success: function (result) {
+                var html="";
+                  for(var i=0;i<result.length;i++)
+                {
+                     html+="<tr id=\"tr_"+result[i].Id+"\">"
+                     html+=" <td>"+result[i].Id+"</td>"
+                     html+=" <td>"+result[i].BookName+"</td>"
+                     html+=" <td>"+result[i].PressName+"</td>"
+                     html+=" <td>"+result[i].Author+"</td>"
+                     html+=" <td>"+result[i].SN+"</td>"
+                     html+=" <td>"+result[i].Version+"</td>"
+                     html+=" <td>"+result[i].Price+"</td>"
+                     html+="<td>";
+                     html+="  <a href=\"javascript:deleteModal("+result[i].Id+")\">删除</a>";
+                     html += "</td>";
+                     html+="<td>";
+                     html+="  <a href=\"javascript:update("+result[i].Id+")\">编辑</a>";
+                     //html+="  <a href=\"/book/update?Id="+result[i].Id+")\">编辑</a>";
+                     html += "</td>";
+                     html+="</tr>";
+                  }
+                  var btnGroupHtml = "";
+                  var j=1;
+                  var PageIndex;
+                  if (CurrentPage-3>1) PageIndex=CurrentPage-3;  else PageIndex=1;
+                  var PrePageIndex;
+                  var AFTPageIndex;
+                  count=@Math.Ceiling(num * 1.0 / pageSize)+1;
+                  while(j<=(@MaxPageIndex) && PageIndex< count)
+                  {
+                      PrePageIndex=CurrentPage-1;
+                      AFTPageIndex=CurrentPage+1;
+                      if (CurrentPage>4&&j==1)
+                      {
+                          btnGroupHtml+="<button type=\"button\" class=\"btn btn-default\" onclick=\"getList("+PrePageIndex +")\">...</button>";
+                      }
+                      if(PageIndex==CurrentPage)
+                      {
+                          btnGroupHtml+="<button type=\"button\" class=\"btn btn-default active \" onclick=\"getList("+PageIndex +")\">"+PageIndex +"</button>";
+                      }
+                      else
+                      {
+                          btnGroupHtml+="<button type=\"button\" class=\"btn btn-default \" onclick=\"getList("+PageIndex +")\">"+PageIndex +"</button>";
+                      }
+                      if (CurrentPage<@(count-4)&&j==(@MaxPageIndex))
+                      {
+                          btnGroupHtml+="<button type=\"button\" class=\"btn btn-default\" onclick=\"getList("+AFTPageIndex+")\">...</button>";
+                      }
+                      PageIndex++;
+                      j++;
+                  }
+                document.getElementById("bodyContent").innerHTML = html;
+                document.getElementById("pageBtnGroup").innerHTML=btnGroupHtml;
+
+            },
+            error: function () {
+                alert("更新失败");
+            }
+        });
+    }
+     function bookDelete() {
+         Id = currentId;
+         $("#myModal").modal("hide");
+         $.ajax({
+                    url: "/book/DeleteJson",
+                    data: "Id=" + Id,
+                    type:"post",
+                    dataType: "json",
+                    success: function (result) {
+                        $("#tr_" + Id).remove();
+                        num--;
+                    },
+                    error: function () {
+                        alert("通讯错误");
+                    }
+                });
+     }
+</script>
+
+}
+
+

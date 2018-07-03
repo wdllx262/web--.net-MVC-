@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "update";
+    Layout = "/Share/_Layout1.cshtml";
+    Book.Model.T_Base_Provider book = ViewBag.book;
+}
+<section id="main-content">
+    <section class="wrapper">
+        <h3><i class="fa fa-angle-right"></i> 供应商修改</h3>
+        <form action="/Provider/upDateSave" method="post">
+            <input type="hidden" id="Id" name="Id" value=@book.Id />
+            供应商名称 <input type="text" id="Name" name="Name" value=@book.Name /> <br />
+            供应商电话<input type="text" id="Tel" name="Tel" value=@book.Tel /> <br />
+            供应商传真<input type="text" id="FAX" name="Fax" value=@book.Fax /><br />
+            备注<input type="text" id="Memo"" name="Memo" value=@book.Memo /><br />
+
+            <input type="submit" name="Save" value="提交 " />
+        </form>
+    </section>
+</section>
+
+

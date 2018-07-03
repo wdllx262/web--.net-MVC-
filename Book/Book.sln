@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Book.Web", "Book.Web\Book.Web.csproj", "{3D4F4A9D-B981-45F4-9C77-60852A1F7998}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Book.Model", "Book.Model\Book.Model.csproj", "{06BEE3DA-48E7-4C62-8515-E276158156F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Book.DAL", "Book.DAL\Book.DAL.csproj", "{47FA357E-0CD9-470F-BAA0-9CC59BBFA710}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Book.BLL", "Book.BLL\Book.BLL.csproj", "{7A1F6D06-DA73-4245-9367-2EF8D8226022}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		测试环境|Any CPU = 测试环境|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D4F4A9D-B981-45F4-9C77-60852A1F7998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D4F4A9D-B981-45F4-9C77-60852A1F7998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D4F4A9D-B981-45F4-9C77-60852A1F7998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D4F4A9D-B981-45F4-9C77-60852A1F7998}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D4F4A9D-B981-45F4-9C77-60852A1F7998}.测试环境|Any CPU.ActiveCfg = 测试环境|Any CPU
+		{3D4F4A9D-B981-45F4-9C77-60852A1F7998}.测试环境|Any CPU.Build.0 = 测试环境|Any CPU
+		{06BEE3DA-48E7-4C62-8515-E276158156F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06BEE3DA-48E7-4C62-8515-E276158156F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06BEE3DA-48E7-4C62-8515-E276158156F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06BEE3DA-48E7-4C62-8515-E276158156F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06BEE3DA-48E7-4C62-8515-E276158156F7}.测试环境|Any CPU.ActiveCfg = 测试环境|Any CPU
+		{06BEE3DA-48E7-4C62-8515-E276158156F7}.测试环境|Any CPU.Build.0 = 测试环境|Any CPU
+		{47FA357E-0CD9-470F-BAA0-9CC59BBFA710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47FA357E-0CD9-470F-BAA0-9CC59BBFA710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47FA357E-0CD9-470F-BAA0-9CC59BBFA710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47FA357E-0CD9-470F-BAA0-9CC59BBFA710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47FA357E-0CD9-470F-BAA0-9CC59BBFA710}.测试环境|Any CPU.ActiveCfg = 测试环境|Any CPU
+		{47FA357E-0CD9-470F-BAA0-9CC59BBFA710}.测试环境|Any CPU.Build.0 = 测试环境|Any CPU
+		{7A1F6D06-DA73-4245-9367-2EF8D8226022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A1F6D06-DA73-4245-9367-2EF8D8226022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A1F6D06-DA73-4245-9367-2EF8D8226022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A1F6D06-DA73-4245-9367-2EF8D8226022}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A1F6D06-DA73-4245-9367-2EF8D8226022}.测试环境|Any CPU.ActiveCfg = 测试环境|Any CPU
+		{7A1F6D06-DA73-4245-9367-2EF8D8226022}.测试环境|Any CPU.Build.0 = 测试环境|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

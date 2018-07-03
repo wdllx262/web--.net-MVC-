@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "update";
+    Layout = "/Share/_Layout1.cshtml";
+    Book.Model.T_Base_Book book = ViewBag.book;
+}
+<section id="main-content">
+    <section class="wrapper">
+        <h3><i class="fa fa-angle-right"></i> 书籍修改</h3>
+        <form action="/Book/upDateSave" method="post">
+            <input type="hidden" id="Id" name="Id" value=@book.Id />
+            书籍 <input type="text" id="BookName" name="BookName" value=@book.BookName /> <br />
+            作者<input type="text" id="Author" name="Author" value=@book.Author /> <br />
+            出版社<input type="text" id="PressName" name="PressName" value=@book.PressName /><br />
+            书号<input type="text" id="SN" name="SN" value=@book.SN /><br />
+            版次<input type="text" id="Version" name="Version" value=@book.Version /><br />
+            价格<input type="text" id="Price" name="Price" value=@book.Price /><br />
+
+            <input type="submit" name="Save" value="提交 " />
+        </form>
+    </section>
+</section>
+
+

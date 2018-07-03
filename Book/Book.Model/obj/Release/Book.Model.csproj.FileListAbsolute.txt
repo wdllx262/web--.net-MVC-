@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\15211160209\Book\Book.Model\bin\Release\Book.Model.dll
+C:\Users\Administrator\Desktop\15211160209\Book\Book.Model\bin\Release\Book.Model.pdb
+C:\Users\Administrator\Desktop\15211160209\Book\Book.Model\obj\Release\Book.Model.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\15211160209\Book\Book.Model\obj\Release\Book.Model.dll
+C:\Users\Administrator\Desktop\15211160209\Book\Book.Model\obj\Release\Book.Model.pdb

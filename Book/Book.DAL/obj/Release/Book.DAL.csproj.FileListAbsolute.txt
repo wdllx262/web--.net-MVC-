@@ -1,0 +1,7 @@
+C:\Users\Administrator\Desktop\15211160209\Book\Book.DAL\bin\Release\Book.DAL.dll
+C:\Users\Administrator\Desktop\15211160209\Book\Book.DAL\bin\Release\Book.DAL.pdb
+C:\Users\Administrator\Desktop\15211160209\Book\Book.DAL\bin\Release\Book.Model.dll
+C:\Users\Administrator\Desktop\15211160209\Book\Book.DAL\bin\Release\Book.Model.pdb
+C:\Users\Administrator\Desktop\15211160209\Book\Book.DAL\obj\Release\Book.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\15211160209\Book\Book.DAL\obj\Release\Book.DAL.dll
+C:\Users\Administrator\Desktop\15211160209\Book\Book.DAL\obj\Release\Book.DAL.pdb

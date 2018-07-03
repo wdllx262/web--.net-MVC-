@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "/Share/_Layout1.cshtml";
+}
+<section id="main-content">
+    <section class="wrapper">
+        <h3><i class="fa fa-angle-right"></i> 书籍增加</h3>
+        <form action="/Book/AddSave" method="post">
+            书籍 <input type="text" id="BookName" name="BookName" /> <br />
+            作者<input type="text" id="Author" name="Author"  /> <br />
+            出版社<input type="text" id="PressName" name="PressName"  /><br />
+            书号<input type="text" id="SN" name="SN" /><br />
+            版次<input type="text" id="Version" name="Version"  /><br />
+            价格<input type="text" id="Price" name="Price" /><br />
+
+            <input type="submit" name="Save" value="提交 " />
+        </form>
+    </section>
+</section>
